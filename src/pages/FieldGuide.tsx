@@ -90,7 +90,7 @@ const sealSpecies: SealSpecies[] = [
       "Square-shaped flippers"
     ],
     distribution: "Rare visitor to northern UK waters. Occasionally seen around Shetland and Orkney",
-    attribution: "Photo: © Sidonio Paes (CC BY), iNaturalist"
+    attribution: "Photo: AI Illustration"
   },
   {
     id: "walrus",
