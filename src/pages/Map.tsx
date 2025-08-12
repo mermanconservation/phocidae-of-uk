@@ -56,6 +56,24 @@ const Map = () => {
   allowFullScreen
 ></iframe>
 
+               <!DOCTYPE html>
+<html>
+<head>
+  <title>Test iNaturalist Widget</title>
+</head>
+<body>
+  <iframe
+    src="https://www.inaturalist.org/observations/widget?place_id=6857&taxon_id=372843&view=map&layout=large"
+    width="100%"
+    height="600"
+    frameborder="0"
+    allowfullscreen
+    title="iNaturalist Seal Observations Map"
+  ></iframe>
+</body>
+</html>
+
+
               </div>
               <div className="mt-4 text-sm text-muted-foreground">
                 <p>Data provided by <a href="https://www.inaturalist.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">iNaturalist</a> - A global community of naturalists</p>
