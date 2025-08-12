@@ -11,7 +11,7 @@ const Map = () => {
     {
       title: "iNaturalist UK Seals",
       description: "Browse community-submitted seal observations across the UK",
-      url: "https://www.inaturalist.org/observations?place_id=6857&subview=map&taxon_id=372843&view=species",
+      url: "https://www.inaturalist.org/observations?place_id=6857&subview=map&taxon_id=372843",
       icon: <ExternalLink className="h-4 w-4" />
     },
     {
