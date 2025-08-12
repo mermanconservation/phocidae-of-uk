@@ -5,19 +5,13 @@ import Navigation from "@/components/Navigation";
 import { MapPin, ExternalLink, Info } from "lucide-react";
 
 const Map = () => {
-  const upcomingFeatures = [
-    "Interactive map with iNaturalist observations",
-    "Real-time sighting reports",
-    "Seasonal migration patterns",
-    "Popular viewing locations with details",
-    "User-submitted photo gallery"
-  ];
+ 
 
   const externalResources = [
     {
       title: "iNaturalist UK Seals",
       description: "Browse community-submitted seal observations across the UK",
-      url: "https://www.inaturalist.org/observations?place_id=7512&taxon_id=41533",
+      url: "https://www.inaturalist.org/observations?place_id=6857&subview=map&taxon_id=372843&view=species",
       icon: <ExternalLink className="h-4 w-4" />
     },
     {
