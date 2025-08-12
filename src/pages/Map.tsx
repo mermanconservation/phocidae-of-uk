@@ -56,7 +56,7 @@ const Map = () => {
               </p>
               <div className="relative w-full h-96 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.inaturalist.org/observations?place_id=6857&subview=map&taxon_id=372843"
+                  src="https://www.inaturalist.org/observations/widget?place_id=6857&taxon_id=372843&view=map&layout=large"
                   className="w-full h-full border-0"
                   title="iNaturalist Seal Observations Map"
                   allowFullScreen
@@ -69,29 +69,7 @@ const Map = () => {
           </Card>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-8">
-          <Card className="shadow-marine">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-primary">
-                <MapPin className="h-5 w-5" />
-                Coming Soon
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">
-                The interactive map will feature:
-              </p>
-              <ul className="space-y-2">
-                {upcomingFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2 text-sm">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-
+        <div className="mb-8">
           <Card className="shadow-marine">
             <CardHeader>
               <CardTitle className="text-primary">External Resources</CardTitle>
