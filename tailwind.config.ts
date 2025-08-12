@@ -63,6 +63,15 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			backgroundImage: {
+				'gradient-ocean': 'var(--gradient-ocean)',
+				'gradient-coastal': 'var(--gradient-coastal)',
+				'gradient-deep': 'var(--gradient-deep)',
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'marine': 'var(--shadow-marine)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
