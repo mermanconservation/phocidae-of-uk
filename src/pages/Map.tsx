@@ -47,13 +47,27 @@ const Map = () => {
           </p>
         </div>
 
-        <Alert className="mb-8 border-accent/50 bg-accent/10">
-          <Info className="h-4 w-4 text-accent" />
-          <AlertDescription className="text-accent">
-            Interactive map feature coming soon! We're working on integrating real-time data from iNaturalist 
-            and other wildlife databases to show current seal observations across the UK.
-          </AlertDescription>
-        </Alert>
+        <div className="mb-8">
+          <Card className="shadow-marine">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold text-primary mb-4">Live iNaturalist Observations</h2>
+              <p className="text-muted-foreground mb-4">
+                Explore real-time seal observations from the iNaturalist community across UK waters.
+              </p>
+              <div className="relative w-full h-96 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.inaturalist.org/observations?place_id=6857&subview=map&taxon_id=372843"
+                  className="w-full h-full border-0"
+                  title="iNaturalist Seal Observations Map"
+                  allowFullScreen
+                />
+              </div>
+              <div className="mt-4 text-sm text-muted-foreground">
+                <p>Data provided by <a href="https://www.inaturalist.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">iNaturalist</a> - A global community of naturalists</p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
           <Card className="shadow-marine">
@@ -115,7 +129,7 @@ const Map = () => {
             <CardTitle className="text-primary">UK Seal Distribution Overview</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <h4 className="font-semibold text-lg mb-2 text-primary">Harbor Seals</h4>
                 <p className="text-sm text-muted-foreground">
@@ -135,6 +149,13 @@ const Map = () => {
                 <p className="text-sm text-muted-foreground">
                   Rare visitors to northern UK waters, occasionally seen around Shetland and Orkney. 
                   Most sightings occur during winter months.
+                </p>
+              </div>
+              <div className="text-center">
+                <h4 className="font-semibold text-lg mb-2 text-primary">Pacific Walrus</h4>
+                <p className="text-sm text-muted-foreground">
+                  Extremely rare visitor to UK waters. Occasionally reported in northern Scotland 
+                  during exceptional Arctic weather events.
                 </p>
               </div>
             </div>

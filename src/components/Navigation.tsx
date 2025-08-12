@@ -14,6 +14,7 @@ const Navigation = () => {
     { href: "/map", label: "Map" },
     { href: "/viewing-guide", label: "Viewing Guide" },
     { href: "/seasonal", label: "Seasonal Info" },
+    { href: "/donate", label: "Donate" },
   ];
 
   const isActive = (href: string) => location.pathname === href;

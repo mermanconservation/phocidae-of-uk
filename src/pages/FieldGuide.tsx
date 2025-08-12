@@ -2,9 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import Navigation from "@/components/Navigation";
-import harborSealImg from "@/assets/harbor-seal.jpg";
-import greySealImg from "@/assets/grey-seal.jpg";
-import beardedSealImg from "@/assets/bearded-seal.jpg";
+import harborSealImg from "@/assets/harbor-seal-real.jpg";
+import greySealImg from "@/assets/grey-seal-real.jpg";
+import beardedSealImg from "@/assets/bearded-seal-real.jpg";
+import walrusImg from "@/assets/walrus-real.jpg";
 
 interface SealSpecies {
   id: string;
@@ -21,6 +22,7 @@ interface SealSpecies {
   conservation: string;
   identification: string[];
   distribution: string;
+  attribution?: string;
 }
 
 const sealSpecies: SealSpecies[] = [
@@ -43,7 +45,8 @@ const sealSpecies: SealSpecies[] = [
       "Smaller than grey seals",
       "Can 'bottle' (float vertically) in water"
     ],
-    distribution: "Found around all UK coasts, particularly Scotland and eastern England"
+    distribution: "Found around all UK coasts, particularly Scotland and eastern England",
+    attribution: "Photo: Wikimedia Commons"
   },
   {
     id: "grey",
@@ -64,7 +67,8 @@ const sealSpecies: SealSpecies[] = [
       "Grey to brown coloration with darker patches",
       "Males have inflated neck during breeding season"
     ],
-    distribution: "Abundant around Scotland, western England, and Wales. Major colonies on remote islands"
+    distribution: "Abundant around Scotland, western England, and Wales. Major colonies on remote islands",
+    attribution: "Photo: Wikimedia Commons"
   },
   {
     id: "bearded",
@@ -85,7 +89,31 @@ const sealSpecies: SealSpecies[] = [
       "Greyish-brown coloration",
       "Square-shaped flippers"
     ],
-    distribution: "Rare visitor to northern UK waters. Occasionally seen around Shetland and Orkney"
+    distribution: "Rare visitor to northern UK waters. Occasionally seen around Shetland and Orkney",
+    attribution: "Photo: © Sidonio Paes (CC BY), iNaturalist"
+  },
+  {
+    id: "walrus",
+    name: "Pacific Walrus",
+    scientificName: "Odobenus rosmarus",
+    image: walrusImg,
+    size: "2.2-3.6m (7.2-11.8ft)",
+    weight: "400-2000kg (880-4400lbs)",
+    lifespan: "20-30 years",
+    habitat: "Ice floes, rocky shores, and shallow Arctic waters",
+    diet: "Clams, mussels, sea snails, crustaceans, and occasionally fish",
+    behavior: "Highly social, forms large herds. Uses tusks for hauling out of water and establishing dominance",
+    reproduction: "Calves born May-August after 15-16 month gestation. Nursed for over a year",
+    conservation: "Vulnerable - Climate change threatens Arctic ice habitat",
+    identification: [
+      "Massive ivory tusks (both sexes)",
+      "Thick, wrinkled skin",
+      "Reddish-brown to gray coloration",
+      "Prominent whiskers (vibrissae)",
+      "Bulky, powerful build"
+    ],
+    distribution: "Extremely rare visitor to UK waters. Occasionally reported in northern Scotland during exceptional Arctic weather events",
+    attribution: "Photo: National Geographic"
   }
 ];
 
@@ -99,7 +127,7 @@ const FieldGuide = () => {
             UK Seals Field Guide
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive information on the three seal species found in UK waters, 
+            Comprehensive information on the seal species and walrus found in UK waters, 
             their biology, behavior, and identification features.
           </p>
         </div>
@@ -170,6 +198,12 @@ const FieldGuide = () => {
                         <strong className="text-primary">Distribution:</strong>
                         <p className="mt-1">{species.distribution}</p>
                       </div>
+                      
+                      {species.attribution && (
+                        <div className="text-xs text-muted-foreground mt-2 italic">
+                          {species.attribution}
+                        </div>
+                      )}
                     </div>
                   </CardContent>
                 </div>
