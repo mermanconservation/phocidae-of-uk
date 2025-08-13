@@ -48,15 +48,28 @@ const Map = () => {
               <p className="text-muted-foreground mb-4">
                 Explore real-time seal observations from the iNaturalist community across UK waters.
               </p>
-              <div className="relative w-full h-96 rounded-lg overflow-hidden">
-                <iframe
-  src="https://www.inaturalist.org/observations/widget?place_id=6857&taxon_id=372843&view=map&layout=large"
-  className="w-full h-full border-0"
-  title="iNaturalist Seal Observations Map"
-  allowFullScreen
-  sandbox="allow-scripts allow-same-origin"
-></iframe>
-
+              <div className="relative w-full h-96 rounded-lg overflow-hidden bg-gradient-subtle border border-border">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+                  <MapPin className="h-16 w-16 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold text-primary mb-2">Interactive Map Available</h3>
+                  <p className="text-muted-foreground mb-6 max-w-md">
+                    View live seal observations on iNaturalist's interactive map with filters for UK waters and all seal species.
+                  </p>
+                  <Button 
+                    asChild 
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90"
+                  >
+                    <a 
+                      href="https://www.inaturalist.org/observations?place_id=6857&subview=map&taxon_id=372843" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2"
+                    >
+                      Open iNaturalist Map <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
               </div>
               <div className="mt-4 text-sm text-muted-foreground">
                 <p>Data provided by <a href="https://www.inaturalist.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">iNaturalist</a> - A global community of naturalists</p>
