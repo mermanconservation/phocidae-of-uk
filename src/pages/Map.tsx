@@ -49,11 +49,12 @@ const Map = () => {
                 Explore real-time seal observations from the iNaturalist community across UK waters.
               </p>
               <div className="relative w-full h-96 rounded-lg overflow-hidden">
-               <iframe
+                <iframe
   src="https://www.inaturalist.org/observations/widget?place_id=6857&taxon_id=372843&view=map&layout=large"
   className="w-full h-full border-0"
   title="iNaturalist Seal Observations Map"
   allowFullScreen
+  sandbox="allow-scripts allow-same-origin"
 ></iframe>
 
               </div>
